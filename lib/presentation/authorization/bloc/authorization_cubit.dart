@@ -12,18 +12,19 @@ class AuthorizationCubit extends Cubit<AuthorizationState> {
     emit(state.copyWith(obscureText: obsText));
   }
 
-  void text(TextEditingController? controller) {
+  // void text(TextEditingController? controller) {
+  //
+  //   emit(state.copyWith(loginController: controller));
+  // }
 
-    emit(state.copyWith(loginController: controller));
+  void focusedColor(Color color){
+    color = const Color(0xff1B1B1B);
+    emit(state.copyWith(sufColor: color));
   }
 
-  void focused(bool focus) {
-    focus = true;
-    emit(state.copyWith(isFocused: focus));
+  void unFocusedColor(Color color){
+    color = const Color(0xffD4D4D4);
+    emit(state.copyWith(sufColor: color));
   }
 
-  void unFocused(bool unFocus) {
-    unFocus = false;
-    emit(state.copyWith(isFocused: unFocus));
-  }
 }

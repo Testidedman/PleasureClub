@@ -2,28 +2,28 @@ part of 'authorization_cubit.dart';
 
 class AuthorizationState{
   AuthorizationState({
-    this.obscureText = true,
     this.loginController,
     this.passwordController,
-    this.isFocused = false
+    this.obscureText = true,
+    this.sufColor = const Color(0xffD4D4D4)
   });
 
   final TextEditingController? loginController;
   final TextEditingController? passwordController;
   final bool obscureText;
-  final bool isFocused;
+  final Color sufColor;
 
   AuthorizationState copyWith({
     TextEditingController? loginController,
     TextEditingController? passwordController,
     bool? obscureText,
-    bool? isFocused
+    Color? sufColor
   }) {
     return AuthorizationState(
         obscureText: obscureText ?? this.obscureText,
         loginController: loginController ?? this.loginController,
         passwordController: passwordController ?? this.passwordController,
-        isFocused: isFocused ?? this.isFocused
+        sufColor: sufColor ?? this.sufColor
     );
   }
 
