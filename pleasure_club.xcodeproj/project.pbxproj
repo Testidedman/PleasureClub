@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		604DF4722B09C69D00B31783 /* pleasure_clubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DF4712B09C69D00B31783 /* pleasure_clubApp.swift */; };
+		604DF4742B09C69D00B31783 /* AuthorizationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DF4732B09C69D00B31783 /* AuthorizationPage.swift */; };
+		604DF4762B09C69E00B31783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604DF4752B09C69E00B31783 /* Assets.xcassets */; };
+		604DF4792B09C69E00B31783 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604DF4782B09C69E00B31783 /* Preview Assets.xcassets */; };
+		604DF4832B09C69E00B31783 /* pleasure_clubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DF4822B09C69E00B31783 /* pleasure_clubTests.swift */; };
+		604DF48D2B09C69E00B31783 /* pleasure_clubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DF48C2B09C69E00B31783 /* pleasure_clubUITests.swift */; };
+		604DF48F2B09C69E00B31783 /* pleasure_clubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DF48E2B09C69E00B31783 /* pleasure_clubUITestsLaunchTests.swift */; };
+		604DF49C2B09C6E000B31783 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DF49B2B09C6E000B31783 /* CustomTabView.swift */; };
+		604DF4A32B09C7BA00B31783 /* Unbounded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 604DF4A22B09C7A900B31783 /* Unbounded.ttf */; };
+		604DF4AA2B09C8EF00B31783 /* Montserrat.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 604DF4A92B09C8E700B31783 /* Montserrat.ttf */; };
+		604DF4AD2B0B191500B31783 /* TextEditingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604DF4AC2B0B191500B31783 /* TextEditingStatus.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		604DF47F2B09C69E00B31783 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 604DF4662B09C69D00B31783 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 604DF46D2B09C69D00B31783;
+			remoteInfo = pleasure_club;
+		};
+		604DF4892B09C69E00B31783 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 604DF4662B09C69D00B31783 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 604DF46D2B09C69D00B31783;
+			remoteInfo = pleasure_club;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		604DF46E2B09C69D00B31783 /* pleasure_club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pleasure_club.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		604DF4712B09C69D00B31783 /* pleasure_clubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pleasure_clubApp.swift; sourceTree = "<group>"; };
+		604DF4732B09C69D00B31783 /* AuthorizationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPage.swift; sourceTree = "<group>"; };
+		604DF4752B09C69E00B31783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		604DF4782B09C69E00B31783 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		604DF47E2B09C69E00B31783 /* pleasure_clubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pleasure_clubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		604DF4822B09C69E00B31783 /* pleasure_clubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pleasure_clubTests.swift; sourceTree = "<group>"; };
+		604DF4882B09C69E00B31783 /* pleasure_clubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pleasure_clubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		604DF48C2B09C69E00B31783 /* pleasure_clubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pleasure_clubUITests.swift; sourceTree = "<group>"; };
+		604DF48E2B09C69E00B31783 /* pleasure_clubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pleasure_clubUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		604DF49B2B09C6E000B31783 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		604DF49D2B09C74200B31783 /* pleasure-club-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "pleasure-club-Info.plist"; sourceTree = SOURCE_ROOT; };
+		604DF4A22B09C7A900B31783 /* Unbounded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unbounded.ttf; sourceTree = "<group>"; };
+		604DF4A92B09C8E700B31783 /* Montserrat.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Montserrat.ttf; sourceTree = "<group>"; };
+		604DF4AC2B0B191500B31783 /* TextEditingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditingStatus.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		604DF46B2B09C69D00B31783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		604DF47B2B09C69E00B31783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		604DF4852B09C69E00B31783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		604DF4652B09C69D00B31783 = {
+			isa = PBXGroup;
+			children = (
+				604DF4702B09C69D00B31783 /* pleasure_club */,
+				604DF4812B09C69E00B31783 /* pleasure_clubTests */,
+				604DF48B2B09C69E00B31783 /* pleasure_clubUITests */,
+				604DF46F2B09C69D00B31783 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		604DF46F2B09C69D00B31783 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				604DF46E2B09C69D00B31783 /* pleasure_club.app */,
+				604DF47E2B09C69E00B31783 /* pleasure_clubTests.xctest */,
+				604DF4882B09C69E00B31783 /* pleasure_clubUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		604DF4702B09C69D00B31783 /* pleasure_club */ = {
+			isa = PBXGroup;
+			children = (
+				604DF4AE2B0B325B00B31783 /* fonts */,
+				604DF4AB2B0B18F900B31783 /* enums */,
+				604DF49D2B09C74200B31783 /* pleasure-club-Info.plist */,
+				604DF4712B09C69D00B31783 /* pleasure_clubApp.swift */,
+				604DF4732B09C69D00B31783 /* AuthorizationPage.swift */,
+				604DF49B2B09C6E000B31783 /* CustomTabView.swift */,
+				604DF4752B09C69E00B31783 /* Assets.xcassets */,
+				604DF4772B09C69E00B31783 /* Preview Content */,
+			);
+			path = pleasure_club;
+			sourceTree = "<group>";
+		};
+		604DF4772B09C69E00B31783 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				604DF4782B09C69E00B31783 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		604DF4812B09C69E00B31783 /* pleasure_clubTests */ = {
+			isa = PBXGroup;
+			children = (
+				604DF4822B09C69E00B31783 /* pleasure_clubTests.swift */,
+			);
+			path = pleasure_clubTests;
+			sourceTree = "<group>";
+		};
+		604DF48B2B09C69E00B31783 /* pleasure_clubUITests */ = {
+			isa = PBXGroup;
+			children = (
+				604DF48C2B09C69E00B31783 /* pleasure_clubUITests.swift */,
+				604DF48E2B09C69E00B31783 /* pleasure_clubUITestsLaunchTests.swift */,
+			);
+			path = pleasure_clubUITests;
+			sourceTree = "<group>";
+		};
+		604DF4AB2B0B18F900B31783 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				604DF4AC2B0B191500B31783 /* TextEditingStatus.swift */,
+			);
+			path = enums;
+			sourceTree = "<group>";
+		};
+		604DF4AE2B0B325B00B31783 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				604DF4A22B09C7A900B31783 /* Unbounded.ttf */,
+				604DF4A92B09C8E700B31783 /* Montserrat.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		604DF46D2B09C69D00B31783 /* pleasure_club */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 604DF4922B09C69E00B31783 /* Build configuration list for PBXNativeTarget "pleasure_club" */;
+			buildPhases = (
+				604DF46A2B09C69D00B31783 /* Sources */,
+				604DF46B2B09C69D00B31783 /* Frameworks */,
+				604DF46C2B09C69D00B31783 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pleasure_club;
+			productName = pleasure_club;
+			productReference = 604DF46E2B09C69D00B31783 /* pleasure_club.app */;
+			productType = "com.apple.product-type.application";
+		};
+		604DF47D2B09C69E00B31783 /* pleasure_clubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 604DF4952B09C69E00B31783 /* Build configuration list for PBXNativeTarget "pleasure_clubTests" */;
+			buildPhases = (
+				604DF47A2B09C69E00B31783 /* Sources */,
+				604DF47B2B09C69E00B31783 /* Frameworks */,
+				604DF47C2B09C69E00B31783 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				604DF4802B09C69E00B31783 /* PBXTargetDependency */,
+			);
+			name = pleasure_clubTests;
+			productName = pleasure_clubTests;
+			productReference = 604DF47E2B09C69E00B31783 /* pleasure_clubTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		604DF4872B09C69E00B31783 /* pleasure_clubUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 604DF4982B09C69E00B31783 /* Build configuration list for PBXNativeTarget "pleasure_clubUITests" */;
+			buildPhases = (
+				604DF4842B09C69E00B31783 /* Sources */,
+				604DF4852B09C69E00B31783 /* Frameworks */,
+				604DF4862B09C69E00B31783 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				604DF48A2B09C69E00B31783 /* PBXTargetDependency */,
+			);
+			name = pleasure_clubUITests;
+			productName = pleasure_clubUITests;
+			productReference = 604DF4882B09C69E00B31783 /* pleasure_clubUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		604DF4662B09C69D00B31783 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					604DF46D2B09C69D00B31783 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					604DF47D2B09C69E00B31783 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 604DF46D2B09C69D00B31783;
+					};
+					604DF4872B09C69E00B31783 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 604DF46D2B09C69D00B31783;
+					};
+				};
+			};
+			buildConfigurationList = 604DF4692B09C69D00B31783 /* Build configuration list for PBXProject "pleasure_club" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 604DF4652B09C69D00B31783;
+			productRefGroup = 604DF46F2B09C69D00B31783 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				604DF46D2B09C69D00B31783 /* pleasure_club */,
+				604DF47D2B09C69E00B31783 /* pleasure_clubTests */,
+				604DF4872B09C69E00B31783 /* pleasure_clubUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		604DF46C2B09C69D00B31783 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				604DF4AA2B09C8EF00B31783 /* Montserrat.ttf in Resources */,
+				604DF4A32B09C7BA00B31783 /* Unbounded.ttf in Resources */,
+				604DF4792B09C69E00B31783 /* Preview Assets.xcassets in Resources */,
+				604DF4762B09C69E00B31783 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		604DF47C2B09C69E00B31783 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		604DF4862B09C69E00B31783 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		604DF46A2B09C69D00B31783 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				604DF4742B09C69D00B31783 /* AuthorizationPage.swift in Sources */,
+				604DF49C2B09C6E000B31783 /* CustomTabView.swift in Sources */,
+				604DF4722B09C69D00B31783 /* pleasure_clubApp.swift in Sources */,
+				604DF4AD2B0B191500B31783 /* TextEditingStatus.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		604DF47A2B09C69E00B31783 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				604DF4832B09C69E00B31783 /* pleasure_clubTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		604DF4842B09C69E00B31783 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				604DF48D2B09C69E00B31783 /* pleasure_clubUITests.swift in Sources */,
+				604DF48F2B09C69E00B31783 /* pleasure_clubUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		604DF4802B09C69E00B31783 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 604DF46D2B09C69D00B31783 /* pleasure_club */;
+			targetProxy = 604DF47F2B09C69E00B31783 /* PBXContainerItemProxy */;
+		};
+		604DF48A2B09C69E00B31783 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 604DF46D2B09C69D00B31783 /* pleasure_club */;
+			targetProxy = 604DF4892B09C69E00B31783 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		604DF4902B09C69E00B31783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		604DF4912B09C69E00B31783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		604DF4932B09C69E00B31783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"pleasure_club/Preview Content\"";
+				DEVELOPMENT_TEAM = 93Y25GZG22;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pleasure-club-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dyk.pleasure-club";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		604DF4942B09C69E00B31783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"pleasure_club/Preview Content\"";
+				DEVELOPMENT_TEAM = 93Y25GZG22;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "pleasure-club-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dyk.pleasure-club";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		604DF4962B09C69E00B31783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93Y25GZG22;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dyk.pleasure-clubTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pleasure_club.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pleasure_club";
+			};
+			name = Debug;
+		};
+		604DF4972B09C69E00B31783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93Y25GZG22;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dyk.pleasure-clubTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pleasure_club.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/pleasure_club";
+			};
+			name = Release;
+		};
+		604DF4992B09C69E00B31783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93Y25GZG22;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dyk.pleasure-clubUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = pleasure_club;
+			};
+			name = Debug;
+		};
+		604DF49A2B09C69E00B31783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 93Y25GZG22;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "dyk.pleasure-clubUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = pleasure_club;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		604DF4692B09C69D00B31783 /* Build configuration list for PBXProject "pleasure_club" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				604DF4902B09C69E00B31783 /* Debug */,
+				604DF4912B09C69E00B31783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		604DF4922B09C69E00B31783 /* Build configuration list for PBXNativeTarget "pleasure_club" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				604DF4932B09C69E00B31783 /* Debug */,
+				604DF4942B09C69E00B31783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		604DF4952B09C69E00B31783 /* Build configuration list for PBXNativeTarget "pleasure_clubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				604DF4962B09C69E00B31783 /* Debug */,
+				604DF4972B09C69E00B31783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		604DF4982B09C69E00B31783 /* Build configuration list for PBXNativeTarget "pleasure_clubUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				604DF4992B09C69E00B31783 /* Debug */,
+				604DF49A2B09C69E00B31783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 604DF4662B09C69D00B31783 /* Project object */;
+}
