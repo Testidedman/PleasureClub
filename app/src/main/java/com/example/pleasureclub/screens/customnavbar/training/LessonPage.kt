@@ -4,7 +4,6 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -13,9 +12,6 @@ import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -26,12 +22,10 @@ import androidx.navigation.NavHostController
 import com.example.pleasureclub.screens.customnavbar.training.widgets.Lesson1
 import com.example.pleasureclub.screens.customnavbar.training.widgets.Lesson4
 import com.example.pleasureclub.widgets.CustomAppBar
-import com.example.pleasureclub.widgets.CustomProgressIndicator
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun LessonPage(navController: NavHostController) {
-    val currentProgress by remember { mutableFloatStateOf(0.5f) }
     val pagerState = rememberPagerState(pageCount = {
         4
     })
@@ -49,7 +43,11 @@ fun LessonPage(navController: NavHostController) {
                     color = Color(0xff070707),
                 )
         ) {
-            HorizontalPager(state = pagerState) {
+            HorizontalPager(
+                state = pagerState,
+                modifier = Modifier
+                    .clip(shape = RoundedCornerShape(28.dp))
+            ) {
                 if (it == 3) {
                     Lesson4()
                 } else {
@@ -60,7 +58,7 @@ fun LessonPage(navController: NavHostController) {
                 modifier = Modifier
                     .requiredHeight(54.dp)
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(28.dp))
+                    .clip(RoundedCornerShape(topEnd = 28.dp , topStart = 28.dp))
                     .background(
                         Brush.verticalGradient(
                             colors = listOf(
@@ -76,7 +74,7 @@ fun LessonPage(navController: NavHostController) {
                 modifier = Modifier
                     .requiredHeight(54.dp)
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(28.dp))
+                    .clip(RoundedCornerShape(bottomEnd = 28.dp , bottomStart = 28.dp))
                     .background(
                         Brush.verticalGradient(
                             colors = listOf(
@@ -89,41 +87,6 @@ fun LessonPage(navController: NavHostController) {
                     )
                     .align(Alignment.BottomCenter)
             )
-            Row(
-                Modifier.padding(
-                    horizontal = 51.39.dp,
-                    vertical = 16.dp
-                )
-            ) {
-                Box (
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(4f)
-                ){
-                    CustomProgressIndicator(currentProgress = currentProgress)
-                }
-                Box (
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(4f)
-                ){
-                    CustomProgressIndicator(currentProgress = currentProgress)
-                }
-                Box (
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(4f)
-                ){
-                    CustomProgressIndicator(currentProgress = currentProgress)
-                }
-                Box (
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .weight(4f)
-                ){
-                    CustomProgressIndicator(currentProgress = currentProgress)
-                }
-            }
         }
     }
 }

@@ -1,15 +1,19 @@
 package com.example.pleasureclub.screens.customnavbar.training.widgets
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -22,16 +26,26 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pleasureclub.R
+import com.example.pleasureclub.widgets.CustomProgressIndicator
 
 @Composable
 fun Lesson1() {
-    LazyColumn(
-        modifier = Modifier.clip(shape = RoundedCornerShape(28.dp))
-    ) {
-        item {
-            Column(
-                Modifier.padding(horizontal = 16.dp, vertical = 42.dp)
-            ) {
+    val itemsCount = 18
+    val scrollState = rememberLazyListState()
+    val firstVisibleItemIndex = remember { derivedStateOf { scrollState.firstVisibleItemIndex } }.value
+    val visibleItemsCount = remember { derivedStateOf { scrollState.layoutInfo } }.value.visibleItemsInfo.size
+    val percent = (firstVisibleItemIndex / (itemsCount - visibleItemsCount).toFloat()) * 100f
+    Box() {
+        LazyColumn(
+            state = scrollState,
+            modifier = Modifier
+                .clip(shape = RoundedCornerShape(28.dp))
+                .padding(horizontal = 16.dp)
+        ) {
+            item {
+                Spacer(modifier = Modifier.height(42.dp))
+            }
+            item {
                 Image(
                     painter = painterResource(id = R.drawable.lesson_2),
                     contentDescription = null,
@@ -41,7 +55,11 @@ fun Lesson1() {
                         .height(180.dp)
                         .clip(RoundedCornerShape(16.dp))
                 )
+            }
+            item {
                 Spacer(modifier = Modifier.height(24.dp))
+            }
+            item {
                 Text(
                     text = "Мультипликатор P/E",
                     style = TextStyle(
@@ -51,7 +69,11 @@ fun Lesson1() {
                         color = Color(0xffFDFDFD),
                     )
                 )
+            }
+            item {
                 Spacer(modifier = Modifier.height(20.dp))
+            }
+            item {
                 Text(
                     text = "Речь идет о соотношении капитализация/прибыль. " +
                             "Некоторые считают его «священным Граалем»," +
@@ -68,7 +90,11 @@ fun Lesson1() {
                         color = Color(0xffF8F8F8),
                     )
                 )
+            }
+            item {
                 Spacer(modifier = Modifier.height(16.dp))
+            }
+            item {
                 Text(
                     text = "Как и любой другой мультипликатор, P/E необходимо правильно использовать, " +
                             "а ситуацию полезно оценивать в комплексе, " +
@@ -85,7 +111,11 @@ fun Lesson1() {
                         color = Color(0xffF8F8F8),
                     )
                 )
+            }
+            item {
                 Spacer(modifier = Modifier.height(28.dp))
+            }
+            item {
                 Text(
                     text = "Для чего нужны мультипликаторы?",
                     style = TextStyle(
@@ -95,7 +125,11 @@ fun Lesson1() {
                         color = Color(0xffFDFDFD),
                     )
                 )
+            }
+            item {
                 Spacer(modifier = Modifier.height(24.dp))
+            }
+            item {
                 Text(
                     text = "Речь идет о фундаментальном анализе, точнее сравнительной оценке." +
                             "Оценку эту принято считать «быстрой и грубой», она способна дать мгновенную, хотя и менее точную по сравнению со сложными моделями дисконтирования денежных потоков картину действительности: " +
@@ -112,7 +146,11 @@ fun Lesson1() {
                         color = Color(0xffF8F8F8),
                     )
                 )
+            }
+            item {
                 Spacer(modifier = Modifier.height(24.dp))
+            }
+            item {
                 Text(
                     text = "Речь идет о фундаментальном анализе, точнее сравнительной оценке." +
                             "Оценку эту принято считать «быстрой и грубой», она способна дать мгновенную, хотя и менее точную по сравнению со сложными моделями дисконтирования денежных потоков картину действительности: " +
@@ -129,7 +167,11 @@ fun Lesson1() {
                         color = Color(0xffF8F8F8),
                     )
                 )
+            }
+            item {
                 Spacer(modifier = Modifier.height(24.dp))
+            }
+            item {
                 Text(
                     text = "Речь идет о фундаментальном анализе, точнее сравнительной оценке." +
                             "Оценку эту принято считать «быстрой и грубой», она способна дать мгновенную, хотя и менее точную по сравнению со сложными моделями дисконтирования денежных потоков картину действительности: " +
@@ -146,7 +188,11 @@ fun Lesson1() {
                         color = Color(0xffF8F8F8),
                     )
                 )
+            }
+            item {
                 Spacer(modifier = Modifier.height(24.dp))
+            }
+            item {
                 Text(
                     text = "Речь идет о фундаментальном анализе, точнее сравнительной оценке." +
                             "Оценку эту принято считать «быстрой и грубой», она способна дать мгновенную, хотя и менее точную по сравнению со сложными моделями дисконтирования денежных потоков картину действительности: " +
@@ -165,5 +211,41 @@ fun Lesson1() {
                 )
             }
         }
+        Row(
+            Modifier.padding(
+                horizontal = 51.39.dp,
+                vertical = 16.dp
+            )
+        ) {
+            Box (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(4f)
+            ){
+                CustomProgressIndicator(currentProgress = percent / 100)
+            }
+            Box (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(4f)
+            ){
+                CustomProgressIndicator(currentProgress = 0f)
+            }
+            Box (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(4f)
+            ){
+                CustomProgressIndicator(currentProgress = 0f)
+            }
+            Box (
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(4f)
+            ){
+                CustomProgressIndicator(currentProgress = 0f)
+            }
+        }
+        //Text(text = scrollText, Modifier.align(Alignment.TopCenter).padding(8.dp))
     }
 }
