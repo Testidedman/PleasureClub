@@ -58,7 +58,7 @@ fun LessonPage(navController: NavHostController) {
                 modifier = Modifier
                     .requiredHeight(54.dp)
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(topEnd = 28.dp , topStart = 28.dp))
+                    .clip(RoundedCornerShape(topEnd = 28.dp , topStart = 28.dp,))
                     .background(
                         Brush.verticalGradient(
                             colors = listOf(
@@ -74,7 +74,7 @@ fun LessonPage(navController: NavHostController) {
                 modifier = Modifier
                     .requiredHeight(54.dp)
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(bottomEnd = 28.dp , bottomStart = 28.dp))
+                    .clip(RoundedCornerShape(bottomEnd = 28.dp , bottomStart = 28.dp,))
                     .background(
                         Brush.verticalGradient(
                             colors = listOf(

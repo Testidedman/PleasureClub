@@ -34,12 +34,9 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
 import com.example.pleasureclub.R
+import com.example.pleasureclub.data.scaledSp
 import com.example.pleasureclub.screens.customnavbar.main.widgets.Goal
 import com.example.pleasureclub.widgets.CourseCard
 
@@ -66,8 +63,8 @@ fun MainPage(navController: NavHostController) {
                                 ),
                             ),
                             fontWeight = FontWeight.Medium,
-                            fontSize = 14.sp,
-                            lineHeight = 20.sp,
+                            fontSize = 14.scaledSp,
+                            lineHeight = 20.scaledSp,
                             color = Color(0xff2B2B2B),
                         )
                     )
@@ -80,8 +77,8 @@ fun MainPage(navController: NavHostController) {
                                 ),
                             ),
                             fontWeight = FontWeight.Normal,
-                            fontSize = 13.sp,
-                            lineHeight = 20.sp,
+                            fontSize = 13.scaledSp,
+                            lineHeight = 20.scaledSp,
                             color = Color(0xff929292)
                         )
                     )
@@ -144,8 +141,8 @@ fun MainPage(navController: NavHostController) {
                                     ),
                                 ),
                                 fontWeight = FontWeight.Medium,
-                                fontSize = 14.sp,
-                                lineHeight = 20.sp,
+                                fontSize = 14.scaledSp,
+                                lineHeight = 20.scaledSp,
                                 color = Color(0xff2B2B2B),
                             )
                         )
@@ -173,8 +170,8 @@ fun MainPage(navController: NavHostController) {
                                         ),
                                     ),
                                     fontWeight = FontWeight.Medium,
-                                    fontSize = 14.sp,
-                                    lineHeight = 20.sp,
+                                    fontSize = 14.scaledSp,
+                                    lineHeight = 20.scaledSp,
                                     color = Color(0xff2B2B2B),
                                 )
                             )
@@ -194,8 +191,8 @@ fun MainPage(navController: NavHostController) {
                                         ),
                                     ),
                                     fontWeight = FontWeight.Medium,
-                                    fontSize = 10.sp,
-                                    lineHeight = 10.sp,
+                                    fontSize = 10.scaledSp,
+                                    lineHeight = 10.scaledSp,
                                     color = Color(0xffFF3535),
                                 )
                             )

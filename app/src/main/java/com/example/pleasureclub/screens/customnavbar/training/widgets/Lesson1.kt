@@ -2,7 +2,6 @@ package com.example.pleasureclub.screens.customnavbar.training.widgets
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -24,13 +23,13 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.pleasureclub.R
-import com.example.pleasureclub.widgets.CustomProgressIndicator
+import com.example.pleasureclub.data.scaledSp
+import com.example.pleasureclub.widgets.CustomProgressIndicators
 
 @Composable
 fun Lesson1() {
-    val itemsCount = 18
+    val itemsCount = 19
     val scrollState = rememberLazyListState()
     val firstVisibleItemIndex = remember { derivedStateOf { scrollState.firstVisibleItemIndex } }.value
     val visibleItemsCount = remember { derivedStateOf { scrollState.layoutInfo } }.value.visibleItemsInfo.size
@@ -64,8 +63,8 @@ fun Lesson1() {
                     text = "Мультипликатор P/E",
                     style = TextStyle(
                         fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp,
-                        lineHeight = 24.sp,
+                        fontSize = 16.scaledSp,
+                        lineHeight = 24.scaledSp,
                         color = Color(0xffFDFDFD),
                     )
                 )
@@ -85,8 +84,8 @@ fun Lesson1() {
                             ),
                         ),
                         fontWeight = FontWeight.Medium,
-                        fontSize = 10.sp,
-                        lineHeight = 16.sp,
+                        fontSize = 10.scaledSp,
+                        lineHeight = 16.scaledSp,
                         color = Color(0xffF8F8F8),
                     )
                 )
@@ -106,8 +105,8 @@ fun Lesson1() {
                             ),
                         ),
                         fontWeight = FontWeight.Medium,
-                        fontSize = 10.sp,
-                        lineHeight = 16.sp,
+                        fontSize = 10.scaledSp,
+                        lineHeight = 16.scaledSp,
                         color = Color(0xffF8F8F8),
                     )
                 )
@@ -120,8 +119,8 @@ fun Lesson1() {
                     text = "Для чего нужны мультипликаторы?",
                     style = TextStyle(
                         fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp,
-                        lineHeight = 24.sp,
+                        fontSize = 16.scaledSp,
+                        lineHeight = 24.scaledSp,
                         color = Color(0xffFDFDFD),
                     )
                 )
@@ -141,8 +140,8 @@ fun Lesson1() {
                             ),
                         ),
                         fontWeight = FontWeight.Medium,
-                        fontSize = 10.sp,
-                        lineHeight = 16.sp,
+                        fontSize = 10.scaledSp,
+                        lineHeight = 16.scaledSp,
                         color = Color(0xffF8F8F8),
                     )
                 )
@@ -162,8 +161,8 @@ fun Lesson1() {
                             ),
                         ),
                         fontWeight = FontWeight.Medium,
-                        fontSize = 10.sp,
-                        lineHeight = 16.sp,
+                        fontSize = 10.scaledSp,
+                        lineHeight = 16.scaledSp,
                         color = Color(0xffF8F8F8),
                     )
                 )
@@ -183,8 +182,8 @@ fun Lesson1() {
                             ),
                         ),
                         fontWeight = FontWeight.Medium,
-                        fontSize = 10.sp,
-                        lineHeight = 16.sp,
+                        fontSize = 10.scaledSp,
+                        lineHeight = 16.scaledSp,
                         color = Color(0xffF8F8F8),
                     )
                 )
@@ -204,48 +203,19 @@ fun Lesson1() {
                             ),
                         ),
                         fontWeight = FontWeight.Medium,
-                        fontSize = 10.sp,
-                        lineHeight = 16.sp,
+                        fontSize = 10.scaledSp,
+                        lineHeight = 16.scaledSp,
                         color = Color(0xffF8F8F8),
                     )
                 )
+            }
+            item {
+                Spacer(modifier = Modifier.height(42.dp))
             }
         }
-        Row(
-            Modifier.padding(
-                horizontal = 51.39.dp,
-                vertical = 16.dp
-            )
-        ) {
-            Box (
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(4f)
-            ){
-                CustomProgressIndicator(currentProgress = percent / 100)
-            }
-            Box (
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(4f)
-            ){
-                CustomProgressIndicator(currentProgress = 0f)
-            }
-            Box (
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(4f)
-            ){
-                CustomProgressIndicator(currentProgress = 0f)
-            }
-            Box (
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(4f)
-            ){
-                CustomProgressIndicator(currentProgress = 0f)
-            }
-        }
-        //Text(text = scrollText, Modifier.align(Alignment.TopCenter).padding(8.dp))
+        CustomProgressIndicators(
+            currentProgress = percent / 100,
+            currentIndex = 0,
+        )
     }
 }

@@ -16,8 +16,8 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.pleasureclub.R
+import com.example.pleasureclub.data.scaledSp
 
 @Composable
 fun CustomButton(onClick: () -> Unit, title: String) {
@@ -41,8 +41,8 @@ fun CustomButton(onClick: () -> Unit, title: String) {
                     ),
                 ),
                 fontWeight = FontWeight.SemiBold,
-                fontSize = 14.sp,
-                lineHeight = 20.sp,
+                fontSize = 14.scaledSp,
+                lineHeight = 20.scaledSp,
                 color = Color(0xffFFFFFF),
             ),
         )

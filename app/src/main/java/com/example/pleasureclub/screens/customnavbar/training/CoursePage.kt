@@ -36,9 +36,9 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.pleasureclub.R
+import com.example.pleasureclub.data.scaledSp
 import com.example.pleasureclub.widgets.CustomAppBar
 
 val filters = listOf<String>(
@@ -100,8 +100,8 @@ fun CoursePage(navController: NavHostController) {
                                     ),
                                 ),
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 12.sp,
-                                lineHeight = 16.sp,
+                                fontSize = 12.scaledSp,
+                                lineHeight = 16.scaledSp,
                                 color = Color(0xffFFFFFF),
                             )
                         )
@@ -146,8 +146,8 @@ fun CoursePage(navController: NavHostController) {
                                             ),
                                         ),
                                         fontWeight = FontWeight.Medium,
-                                        fontSize = 8.sp,
-                                        lineHeight = 12.sp,
+                                        fontSize = 8.scaledSp,
+                                        lineHeight = 12.scaledSp,
                                         color = Color(0xff2B2B2B),
                                     )
                                 )
@@ -161,8 +161,8 @@ fun CoursePage(navController: NavHostController) {
                                         ),
                                     ),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 26.sp,
-                                    lineHeight = 36.sp,
+                                    fontSize = 26.scaledSp,
+                                    lineHeight = 36.scaledSp,
                                     color = Color(0xff0F0F0F),
                                 )
                             )
@@ -206,8 +206,8 @@ fun CoursePage(navController: NavHostController) {
                                             ),
                                         ),
                                         fontWeight = FontWeight.Medium,
-                                        fontSize = 8.sp,
-                                        lineHeight = 12.sp,
+                                        fontSize = 8.scaledSp,
+                                        lineHeight = 12.scaledSp,
                                         color = Color(0xff2B2B2B),
                                     )
                                 )
@@ -224,8 +224,8 @@ fun CoursePage(navController: NavHostController) {
                                             ),
                                         ),
                                         fontWeight = FontWeight.Bold,
-                                        fontSize = 26.sp,
-                                        lineHeight = 36.sp,
+                                        fontSize = 26.scaledSp,
+                                        lineHeight = 36.scaledSp,
                                         color = Color(0xff0F0F0F),
                                     )
                                 )
@@ -238,8 +238,8 @@ fun CoursePage(navController: NavHostController) {
                                             ),
                                         ),
                                         fontWeight = FontWeight.Bold,
-                                        fontSize = 12.sp,
-                                        lineHeight = 36.sp,
+                                        fontSize = 12.scaledSp,
+                                        lineHeight = 36.scaledSp,
                                         color = Color(0xff929292),
                                     )
                                 )
@@ -277,8 +277,8 @@ fun CoursePage(navController: NavHostController) {
                                    ),
                                ),
                                fontWeight = FontWeight.Medium,
-                               fontSize = 12.sp,
-                               lineHeight = 20.sp,
+                               fontSize = 12.scaledSp,
+                               lineHeight = 20.scaledSp,
                                color = Color(0xff0F0F0F),
                            )
                        )
@@ -335,8 +335,8 @@ fun CoursePage(navController: NavHostController) {
                                                 ),
                                             ),
                                             fontWeight = FontWeight.Medium,
-                                            fontSize = 10.sp,
-                                            lineHeight = 16.sp,
+                                            fontSize = 10.scaledSp,
+                                            lineHeight = 16.scaledSp,
                                             color = Color(0xff929292),
                                         )
                                     )
@@ -357,8 +357,8 @@ fun CoursePage(navController: NavHostController) {
                                             ),
                                         ),
                                         fontWeight = FontWeight.Medium,
-                                        fontSize = 12.sp,
-                                        lineHeight = 16.sp,
+                                        fontSize = 12.scaledSp,
+                                        lineHeight = 16.scaledSp,
                                         color = Color(0xff2B2B2B),
                                     )
                                 )

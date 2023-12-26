@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -32,9 +31,9 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.pleasureclub.R
+import com.example.pleasureclub.data.scaledSp
 
 @Composable
 fun Goal(navController: NavController) {
@@ -89,8 +88,8 @@ fun Goal(navController: NavController) {
                                 ),
                             ),
                             fontWeight = FontWeight.Medium,
-                            fontSize = 12.sp,
-                            lineHeight = 18.sp,
+                            fontSize = 12.scaledSp,
+                            lineHeight = 18.scaledSp,
                             color = Color(0xff2B2B2B),
                         )
                     )
@@ -103,8 +102,8 @@ fun Goal(navController: NavController) {
                                 ),
                             ),
                             fontWeight = FontWeight.Normal,
-                            fontSize = 8.sp,
-                            lineHeight = 14.sp,
+                            fontSize = 8.scaledSp,
+                            lineHeight = 14.scaledSp,
                             color = Color(0xff929292),
                         )
                     )

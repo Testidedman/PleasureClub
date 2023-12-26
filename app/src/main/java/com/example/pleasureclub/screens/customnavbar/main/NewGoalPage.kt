@@ -17,7 +17,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.SliderColors
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Slider
@@ -42,9 +41,9 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.pleasureclub.R
+import com.example.pleasureclub.data.scaledSp
 import com.example.pleasureclub.enums.TextFieldStatus
 import com.example.pleasureclub.widgets.CustomAppBar
 import com.example.pleasureclub.widgets.CustomButton
@@ -82,7 +81,7 @@ fun NewGoalPage(navController: NavHostController) {
                         },
                         textStyle = TextStyle(
                             fontWeight = FontWeight.W400,
-                            fontSize = 13.sp,
+                            fontSize = 13.scaledSp,
                             color = Color(0xff070707)
                         ),
                         modifier = Modifier
@@ -121,8 +120,8 @@ fun NewGoalPage(navController: NavHostController) {
                                             ),
                                         ),
                                         fontWeight = FontWeight.Normal,
-                                        fontSize = 13.sp,
-                                        lineHeight = 20.sp,
+                                        fontSize = 13.scaledSp,
+                                        lineHeight = 20.scaledSp,
                                         color = Color(0xffD4D4D4),
                                     )
                                 )
@@ -145,7 +144,7 @@ fun NewGoalPage(navController: NavHostController) {
                         },
                         textStyle = TextStyle(
                             fontWeight = FontWeight.W400,
-                            fontSize = 13.sp,
+                            fontSize = 13.scaledSp,
                             color = Color(0xff070707),
                             textAlign = TextAlign.Start,
                         ),
@@ -185,8 +184,8 @@ fun NewGoalPage(navController: NavHostController) {
                                             ),
                                         ),
                                         fontWeight = FontWeight.Normal,
-                                        fontSize = 13.sp,
-                                        lineHeight = 20.sp,
+                                        fontSize = 13.scaledSp,
+                                        lineHeight = 20.scaledSp,
                                         color = Color(0xffD4D4D4),
                                     )
                                 )
@@ -211,8 +210,8 @@ fun NewGoalPage(navController: NavHostController) {
                                 ),
                             ),
                             fontWeight = FontWeight.Medium,
-                            fontSize = 14.sp,
-                            lineHeight = 20.sp,
+                            fontSize = 14.scaledSp,
+                            lineHeight = 20.scaledSp,
                             color = Color(0xff2B2B2B),
                         )
                     )
@@ -252,8 +251,8 @@ fun NewGoalPage(navController: NavHostController) {
                                     ),
                                 ),
                                 fontWeight = FontWeight.Medium,
-                                fontSize = 10.sp,
-                                lineHeight = 16.sp,
+                                fontSize = 10.scaledSp,
+                                lineHeight = 16.scaledSp,
                                 color = Color(0xff929292),
                             )
                         )
@@ -266,8 +265,8 @@ fun NewGoalPage(navController: NavHostController) {
                                     ),
                                 ),
                                 fontWeight = FontWeight.Medium,
-                                fontSize = 10.sp,
-                                lineHeight = 16.sp,
+                                fontSize = 10.scaledSp,
+                                lineHeight = 16.scaledSp,
                                 color = Color(0xff929292),
                             )
                         )
@@ -280,8 +279,8 @@ fun NewGoalPage(navController: NavHostController) {
                                     ),
                                 ),
                                 fontWeight = FontWeight.Medium,
-                                fontSize = 10.sp,
-                                lineHeight = 16.sp,
+                                fontSize = 10.scaledSp,
+                                lineHeight = 16.scaledSp,
                                 color = Color(0xff929292),
                             )
                         )

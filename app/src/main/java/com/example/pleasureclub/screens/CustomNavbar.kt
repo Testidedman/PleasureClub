@@ -19,7 +19,6 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
@@ -28,6 +27,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.pleasureclub.R
+import com.example.pleasureclub.data.scaledSp
 import com.example.pleasureclub.screens.customnavbar.main.MainPage
 import com.example.pleasureclub.screens.customnavbar.strategies.StrategiesPage
 import com.example.pleasureclub.screens.customnavbar.training.TrainingPage
@@ -87,9 +87,9 @@ fun CustomNavbar(navController: NavHostController) {
                                         ),
                                     ),
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 10.sp,
-                                    lineHeight = 11.93.sp,
-                                    letterSpacing = (-0.24).sp,
+                                    fontSize = 10.scaledSp,
+                                    lineHeight = 11.93.scaledSp,
+                                    letterSpacing = (-0.24).scaledSp,
                                     color = if (currentDestination?.route == screen.route) Color(
                                         0xff2A2A2A
                                     ) else Color(0xffB8B8B8),
@@ -111,7 +111,7 @@ fun CustomNavbar(navController: NavHostController) {
                                 // Restore state when reselecting a previously selected item
                                 restoreState = true
                             }
-                        }
+                        },
                     )
                 }
             }

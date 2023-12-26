@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
                     val navController = rememberNavController()
                     NavHost(
                         navController = navController,
-                        startDestination = "lesson",
+                        startDestination = "authorization",
                         enterTransition = { EnterTransition.None },
                         exitTransition = { ExitTransition.None }
                     ) {
@@ -50,20 +50,20 @@ class MainActivity : ComponentActivity() {
                             enterTransition = {
                                 fadeIn(
                                     animationSpec = tween(
-                                        300, easing = LinearEasing
+                                        300, easing = LinearEasing,
                                     )
                                 ) + slideIntoContainer(
-                                    animationSpec = tween(300, easing = EaseIn),
+                                    animationSpec = tween(300, easing = EaseIn,),
                                     towards = AnimatedContentTransitionScope.SlideDirection.Start
                                 )
                             },
                             exitTransition = {
                                 fadeOut(
                                     animationSpec = tween(
-                                        300, easing = LinearEasing
+                                        300, easing = LinearEasing,
                                     )
                                 ) + slideOutOfContainer(
-                                    animationSpec = tween(300, easing = EaseOut),
+                                    animationSpec = tween(300, easing = EaseOut,),
                                     towards = AnimatedContentTransitionScope.SlideDirection.End
                                 )
                             }
@@ -74,20 +74,20 @@ class MainActivity : ComponentActivity() {
                             enterTransition = {
                                 fadeIn(
                                     animationSpec = tween(
-                                        300, easing = LinearEasing
+                                        300, easing = LinearEasing,
                                     )
                                 ) + slideIntoContainer(
-                                    animationSpec = tween(300, easing = EaseIn),
+                                    animationSpec = tween(300, easing = EaseIn,),
                                     towards = AnimatedContentTransitionScope.SlideDirection.Start
                                 )
                             },
                             exitTransition = {
                                 fadeOut(
                                     animationSpec = tween(
-                                        300, easing = LinearEasing
+                                        300, easing = LinearEasing,
                                     )
                                 ) + slideOutOfContainer(
-                                    animationSpec = tween(300, easing = EaseOut),
+                                    animationSpec = tween(300, easing = EaseOut,),
                                     towards = AnimatedContentTransitionScope.SlideDirection.End
                                 )
                             }
@@ -97,20 +97,20 @@ class MainActivity : ComponentActivity() {
                             enterTransition = {
                                 fadeIn(
                                     animationSpec = tween(
-                                        300, easing = LinearEasing
+                                        300, easing = LinearEasing,
                                     )
                                 ) + slideIntoContainer(
-                                    animationSpec = tween(300, easing = EaseIn),
+                                    animationSpec = tween(300, easing = EaseIn,),
                                     towards = AnimatedContentTransitionScope.SlideDirection.Start
                                 )
                             },
                             exitTransition = {
                                 fadeOut(
                                     animationSpec = tween(
-                                        300, easing = LinearEasing
+                                        300, easing = LinearEasing,
                                     )
                                 ) + slideOutOfContainer(
-                                    animationSpec = tween(300, easing = EaseOut),
+                                    animationSpec = tween(300, easing = EaseOut,),
                                     towards = AnimatedContentTransitionScope.SlideDirection.End
                                 )
                             }
@@ -120,20 +120,20 @@ class MainActivity : ComponentActivity() {
                             enterTransition = {
                                 fadeIn(
                                     animationSpec = tween(
-                                        300, easing = LinearEasing
+                                        300, easing = LinearEasing,
                                     )
                                 ) + slideIntoContainer(
-                                    animationSpec = tween(300, easing = EaseIn),
+                                    animationSpec = tween(300, easing = EaseIn,),
                                     towards = AnimatedContentTransitionScope.SlideDirection.Start
                                 )
                             },
                             exitTransition = {
                                 fadeOut(
                                     animationSpec = tween(
-                                        300, easing = LinearEasing
+                                        300, easing = LinearEasing,
                                     )
                                 ) + slideOutOfContainer(
-                                    animationSpec = tween(300, easing = EaseOut),
+                                    animationSpec = tween(300, easing = EaseOut,),
                                     towards = AnimatedContentTransitionScope.SlideDirection.End
                                 )
                             }
@@ -143,7 +143,7 @@ class MainActivity : ComponentActivity() {
                             enterTransition = {
                                 fadeIn(
                                     animationSpec = tween(
-                                        300, easing = LinearEasing
+                                        300, easing = LinearEasing,
                                     )
                                 ) + slideIntoContainer(
                                     animationSpec = tween(300, easing = EaseIn),
@@ -153,7 +153,7 @@ class MainActivity : ComponentActivity() {
                             exitTransition = {
                                 fadeOut(
                                     animationSpec = tween(
-                                        300, easing = LinearEasing
+                                        300, easing = LinearEasing,
                                     )
                                 ) + slideOutOfContainer(
                                     animationSpec = tween(300, easing = EaseOut),

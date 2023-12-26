@@ -2,7 +2,6 @@ package com.example.pleasureclub.screens
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -19,8 +18,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextFieldDefaults
@@ -47,9 +44,9 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.pleasureclub.R
+import com.example.pleasureclub.data.scaledSp
 import com.example.pleasureclub.enums.TextFieldStatus
 import com.example.pleasureclub.widgets.CustomButton
 
@@ -102,7 +99,7 @@ fun AuthorizationPage(navController: NavHostController) {
                         text = "Авторизация",
                         modifier = Modifier.align(Alignment.CenterHorizontally),
                         style = TextStyle(
-                            fontSize = 24.sp,
+                            fontSize = 24.scaledSp,
                             color = Color(0xff151515),
                             fontWeight = FontWeight.Medium,
                             fontFamily = FontFamily(
@@ -118,8 +115,8 @@ fun AuthorizationPage(navController: NavHostController) {
                             text = "Логин введён неверно",
                             style = TextStyle(
                                 fontWeight = FontWeight.Normal,
-                                fontSize = 12.sp,
-                                lineHeight = 20.sp,
+                                fontSize = 12.scaledSp,
+                                lineHeight = 20.scaledSp,
                                 color = Color(0xffE70000),
                                 fontFamily = FontFamily(
                                     Font(
@@ -147,7 +144,7 @@ fun AuthorizationPage(navController: NavHostController) {
                         },
                         textStyle = TextStyle(
                             fontWeight = FontWeight.W400,
-                            fontSize = 13.sp,
+                            fontSize = 13.scaledSp,
                             color = Color(0xff070707)
                         ),
                         modifier = Modifier
@@ -186,8 +183,8 @@ fun AuthorizationPage(navController: NavHostController) {
                                             ),
                                         ),
                                         fontWeight = FontWeight.Normal,
-                                        fontSize = 13.sp,
-                                        lineHeight = 20.sp,
+                                        fontSize = 13.scaledSp,
+                                        lineHeight = 20.scaledSp,
                                         color = Color(0xffD4D4D4),
                                     )
                                 )
@@ -211,7 +208,7 @@ fun AuthorizationPage(navController: NavHostController) {
                         },
                         textStyle = TextStyle(
                             fontWeight = FontWeight.W400,
-                            fontSize = 13.sp,
+                            fontSize = 13.scaledSp,
                             color = Color(0xff070707)
                         ),
                         modifier = Modifier
@@ -251,8 +248,8 @@ fun AuthorizationPage(navController: NavHostController) {
                                             ),
                                         ),
                                         fontWeight = FontWeight.Normal,
-                                        fontSize = 13.sp,
-                                        lineHeight = 20.sp,
+                                        fontSize = 13.scaledSp,
+                                        lineHeight = 20.scaledSp,
                                         color = Color(0xffD4D4D4),
                                     )
                                 )
@@ -295,8 +292,8 @@ fun AuthorizationPage(navController: NavHostController) {
                             text = "Пароль введён неверно",
                             style = TextStyle(
                                 fontWeight = FontWeight.Normal,
-                                fontSize = 12.sp,
-                                lineHeight = 20.sp,
+                                fontSize = 12.scaledSp,
+                                lineHeight = 20.scaledSp,
                                 color = Color(0xffE70000),
                                 fontFamily = FontFamily(
                                     Font(
@@ -337,8 +334,8 @@ fun AuthorizationPage(navController: NavHostController) {
                                     ),
                                 ),
                                 fontWeight = FontWeight.Normal,
-                                fontSize = 12.sp,
-                                lineHeight = 20.sp,
+                                fontSize = 12.scaledSp,
+                                lineHeight = 20.scaledSp,
                                 color = Color(0xff2B2B2B),
                             ),
                         )
@@ -351,8 +348,8 @@ fun AuthorizationPage(navController: NavHostController) {
                                     ),
                                 ),
                                 fontWeight = FontWeight.SemiBold,
-                                fontSize = 14.sp,
-                                lineHeight = 20.sp,
+                                fontSize = 14.scaledSp,
+                                lineHeight = 20.scaledSp,
                                 color = Color(0xff2B2B2B),
                             ),
                             modifier = Modifier.clickable {}
