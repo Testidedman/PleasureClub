@@ -1,4 +1,5 @@
 import 'package:f/presentation/training_page.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../custom_nav_bar.dart';
@@ -11,31 +12,31 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-  create: (context) => HomeCubit(),
-  child: Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          Navigator(
-            onGenerateRoute: (route) => MaterialPageRoute(
-                settings: route,
-                builder: (context) => BlocBuilder<HomeCubit, HomeState>(
-                  builder: (context, state) {
-                    return switch (state.index) {
-                      0 => MainPage(),
-                      1 => TrainingPage(),
-                      2 => MainPage(),
-                      3 => TrainingPage(),
-                      _ => SizedBox()
-                    };
-                  },
-                )
+      create: (context) => HomeCubit(),
+      child: Scaffold(
+        body: Stack(
+          fit: StackFit.expand,
+          children: [
+            Navigator(
+              onGenerateRoute: (route) => MaterialPageRoute(
+                  settings: route,
+                  builder: (context) => BlocBuilder<HomeCubit, HomeState>(
+                    builder: (context, state) {
+                      return switch (state.index) {
+                        0 => const MainPage(),
+                        1 => const TrainingPage(),
+                        2 => const MainPage(),
+                        3 => const TrainingPage(),
+                        _ => const SizedBox()
+                      };
+                    },
+                  )
+              ),
             ),
-          ),
-          CustomNavBar()
-        ],
+            const CustomNavBar()
+          ],
+        ),
       ),
-    ),
-);
+    );
   }
 }

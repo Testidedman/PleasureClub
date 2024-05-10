@@ -31,6 +31,8 @@ dependencies:
   flutter_svg: ^2.0.7
   google_fonts: ^6.1.0
   go_router: ^14.0.1
+  http: ^1.2.1
+  shared_preferences: ^2.2.3
 
 
 dev_dependencies:
