@@ -24,7 +24,7 @@ class CustomNavBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 const SizedBox(),
-                GestureDetector(onTap: () {
+                InkWell(onTap: () {
                   context.read<HomeCubit>().changeIndex(0);
                 },
                   child: Column(
@@ -50,7 +50,7 @@ class CustomNavBar extends StatelessWidget {
                     ],
                   ),
                 ),
-                GestureDetector(onTap: () {
+                InkWell(onTap: () {
                   context.read<HomeCubit>().changeIndex(1);
                 },
                   child: Column(
@@ -76,7 +76,7 @@ class CustomNavBar extends StatelessWidget {
                     ],
                   ),
                 ),
-                GestureDetector(onTap: () {
+                InkWell(onTap: () {
                   context.read<HomeCubit>().changeIndex(2);
                 },
                   child: Column(
@@ -102,7 +102,7 @@ class CustomNavBar extends StatelessWidget {
                     ],
                   ),
                 ),
-                GestureDetector(onTap: () {
+                InkWell(onTap: () {
                   context.read<HomeCubit>().changeIndex(3);
                 },
                   child: Column(
@@ -115,12 +115,14 @@ class CustomNavBar extends StatelessWidget {
                       ),
                       Text(
                           'Тренажеры',
-                          style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              fontSize: 10,
-                              color: state.index == 3
-                                  ? Colors.black
-                                  : Colors.grey
+                          style: GoogleFonts.unbounded(
+                              textStyle: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 10,
+                                  color: state.index == 3
+                                      ? Colors.black
+                                      : Colors.grey
+                              )
                           )
                       )
                     ],

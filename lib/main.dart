@@ -1,3 +1,4 @@
+import 'package:f/main_page/new_goal.dart';
 import 'package:f/presentation/authorization/authorization_page.dart';
 import 'package:f/presentation/authorization/bloc/authorization_cubit.dart';
 import 'package:f/presentation/home/home_page.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: GoRouter(
-        initialLocation: token == null ? '/' : '/home',
+        initialLocation: token == null ? '/' : '/new_goal',
         routes: [
           GoRoute(
             path: '/',
@@ -37,6 +38,10 @@ class MyApp extends StatelessWidget {
           GoRoute(
             path: '/home',
             builder: (context, state) => const HomePage(),
+          ),
+          GoRoute(
+            path: '/new_goal',
+            builder: (context, state) => const NewGoal(),
           ),
         ],
       ),

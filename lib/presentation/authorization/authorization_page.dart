@@ -94,8 +94,7 @@ class _AuthorizationPageState extends State<AuthorizationPage> {
                                           )
                                       ),
                                       focusedBorder: outlineInputBorder(const Color(0xff1B1B1B)),
-                                      errorBorder:
-                                      outlineInputBorder(Colors.red),
+                                      errorBorder: outlineInputBorder(Colors.red),
                                       enabledBorder: outlineInputBorder(const Color(0xffD4D4D4)),
                                       border: InputBorder.none
                                   ),
