@@ -1,10 +1,10 @@
-import 'package:f/main_page/bloc/main_page_cubit.dart';
 import 'package:f/widgets/number_block.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'bloc/main_page_cubit.dart';
 import 'bloc/main_page_state.dart';
 
 class MainPage extends StatelessWidget {
