@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class NewGoal extends StatelessWidget {
+class NewGoal extends StatefulWidget {
   const NewGoal({super.key});
+
+  @override
+  State<NewGoal> createState() => _NewGoalState();
+}
+
+class _NewGoalState extends State<NewGoal> {
+
+  double _currentSliderValue = 0;
 
   Text priority(String text) {
     return Text(
@@ -17,15 +25,16 @@ class NewGoal extends StatelessWidget {
         )
     );
   }
-  Container priorityPoint({double? width, double? height}) {
-    return Container(
-      width: width,
-      height: height,
-      decoration: const BoxDecoration(
-          shape: BoxShape.circle,
-          color: Color(0xff49454F)
-      ),
-    );
+
+  Color priorityColor(double value) {
+    switch (value) {
+      case 0:
+        return Colors.grey;
+      case 50:
+        return Colors.yellow;
+      default:
+        return Colors.red;
+    }
   }
 
   @override
@@ -34,7 +43,7 @@ class NewGoal extends StatelessWidget {
       backgroundColor: const Color(0xffF2F2F2),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 24, right: 24, bottom: 8, top: 30),
+          padding: const EdgeInsets.only(left: 24, right: 24, bottom: 15, top: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -141,23 +150,22 @@ class NewGoal extends StatelessWidget {
                       )
                   )
               ),
-              const SizedBox(height: 8),
-              Container(
-                height: 4,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(4),
-                    color: const Color(0xffE6E0E9)
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    priorityPoint(width: 4, height: 4),
-                    priorityPoint(width: 4, height: 4),
-                    priorityPoint(width: 4, height: 4)
-                  ],
+              SizedBox(
+                height: 40,
+                child: Slider(
+                  value: _currentSliderValue,
+                  onChanged: (double value) {
+                    _currentSliderValue = value;
+                    print(_currentSliderValue);
+                    setState(() {
+                    });
+                  },
+                  max: 100,
+                  divisions: 2,
+                  thumbColor: priorityColor(_currentSliderValue),
+                  activeColor: priorityColor(_currentSliderValue),
                 ),
               ),
-              const SizedBox(height: 6),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -165,7 +173,26 @@ class NewGoal extends StatelessWidget {
                   priority('Нормально'),
                   priority('Важно')
                 ],
-              )
+              ),
+              const Spacer(),
+              Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.symmetric(vertical: 18),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: Colors.red.withOpacity(0.5)
+                ),
+                child: Text(
+                    'Создать цель',
+                    style: GoogleFonts.unbounded(
+                        textStyle: const TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 14,
+                            color: Color(0xffFFFFFF)
+                        )
+                    )
+                ),
+              ),
             ],
           ),
         ),
