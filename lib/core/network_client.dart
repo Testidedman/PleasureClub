@@ -25,13 +25,13 @@ class INetworkClient extends NetworkClient {
 
   Future<Map<String, dynamic>> get(String url) async {
     http.Response response = await http.get(
-      Uri.parse('http://10.0.2.2:8000/$url'),
+      Uri.parse('https://pc-backend-cqbr.onrender.com/$url'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
     );
     if (response.statusCode == 200) {
-      return jsonDecode(response.body);
+      return json.decode(utf8.decode(response.bodyBytes));
     } else {
       throw UnimplementedError();
     }

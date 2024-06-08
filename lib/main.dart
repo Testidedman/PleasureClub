@@ -2,6 +2,7 @@ import 'package:f/core/storage_service.dart';
 import 'package:f/presentation/authorization/authorization_page.dart';
 import 'package:f/presentation/authorization/bloc/authorization_cubit.dart';
 import 'package:f/presentation/home/home_page.dart';
+import 'package:f/presentation/main_page/widgets/story_page.dart';
 import 'package:f/presentation/new_goal/new_goal.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -41,6 +42,10 @@ class MyApp extends StatelessWidget {
             path: '/new_goal',
             builder: (context, state) => const NewGoal(),
           ),
+          GoRoute(
+              path: '/story',
+            builder: (context, state) => const StoryPage()
+          )
         ],
       ),
     );
