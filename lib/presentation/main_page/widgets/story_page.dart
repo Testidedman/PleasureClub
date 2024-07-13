@@ -1,24 +1,49 @@
 import 'dart:async';
 
+import 'package:f/presentation/main_page/widgets/custom_video.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
+import '../models/story_model.dart';
+
 class StoryPage extends StatefulWidget {
-  const StoryPage({super.key});
+  const StoryPage({
+    required this.stories,
+    required this.index,
+    super.key
+  });
+
+  final List<StoryModel> stories;
+  final int index;
 
   @override
   State<StoryPage> createState() => _StoryPageState();
 }
 
-class _StoryPageState extends State<StoryPage> {
-  final PageController _pageController = PageController();
+class _StoryPageState extends State<StoryPage> with SingleTickerProviderStateMixin {
+  late final AnimationController _animationController;
+  late final PageController _pageController;
+  late final double _storyLineWidth = (MediaQuery.of(context).size.width - 16
+      - widget.stories.length * 4) / widget.stories.length;
+  late final Timer _timer;
+  double _animationWidth = 0;
   int _index = 0;
 
   @override
   void initState() {
-    Timer(const Duration(seconds: 10), () {
+    _animationController = AnimationController(
+        duration: const Duration(seconds: 10),
+        vsync: this
+    )..addListener(() {
+      _animationWidth = _animationController.value * _storyLineWidth;
+      setState(() {
+
+      });
+    })..forward();
+    _pageController = PageController(initialPage: widget.index);
+    _timer = Timer(const Duration(seconds: 10), () {
       if(_index == 3) {
         context.pop();
       } else {
@@ -32,25 +57,36 @@ class _StoryPageState extends State<StoryPage> {
   }
 
   @override
+  void dispose() {
+    // TODO: implement dispose
+    _animationController.dispose();
+    _timer.cancel();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.black,
       body: Stack(
         fit: StackFit.expand,
         children: [
           PageView.builder(
             controller: _pageController,
-            itemCount: 3,
+            itemCount: widget.stories.length,
             onPageChanged: (value) {
+              _animationWidth = 0;
               _index = value;
+              _animationController.reset();
+              _animationController.forward();
             },
             itemBuilder: (BuildContext context, int index) {
               return Hero(
-                tag: 'story',
-                child: Image.network('https://firebasest'
-                    'orage.googleapis.com/v0/b/pleasureclub-4d7ee.appspot.com/o/'
-                    '2024-05-31%2021.25.39.jpg?alt=media&tok'
-                    'en=5887fd17-847a-4ca4-962f-2953bd3903b3',
+                tag: widget.stories[index].url,
+                child: widget.stories[index].isVideo
+                    ? CustomVideo(url: widget.stories[index].url)
+                    : Image.network(
+                    widget.stories[index].url,
                     fit: BoxFit.cover
                 ),
               );
@@ -62,17 +98,29 @@ class _StoryPageState extends State<StoryPage> {
             right: 8,
             child: Row(
               children: [
-                for(int i = 0; i<3; i++)
-                  Expanded(
-                    child: Container(
-                      height: 5,
-                      margin: const EdgeInsets.symmetric(horizontal: 2),
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: Colors.grey
-                      ),
+                for(int i = 0; i < widget.stories.length; i++)
+                    Stack(
+                      children: [
+                        Container(
+                          height: 5,
+                          width: _storyLineWidth,
+                          margin: const EdgeInsets.symmetric(horizontal: 2),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.grey
+                          ),
+                        ),
+                        Container(
+                          height: 5,
+                          width: _index == i ? _animationWidth : _index > i ? _storyLineWidth : 0,
+                          margin: const EdgeInsets.symmetric(horizontal: 2),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              color: Colors.white
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
               ],
             ),
           ),
@@ -90,9 +138,7 @@ class _StoryPageState extends State<StoryPage> {
                     );
                   }
                 },
-                  child: Container(
-                    color: Colors.transparent,
-                  ),
+                  child: Container(color: Colors.transparent),
                 ),
               ),
               Expanded(
@@ -106,9 +152,7 @@ class _StoryPageState extends State<StoryPage> {
                     );
                   }
                 },
-                  child: Container(
-                    color: Colors.transparent,
-                  ),
+                  child: Container(color: Colors.transparent),
                 ),
               )
             ],

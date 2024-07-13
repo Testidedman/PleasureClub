@@ -13,16 +13,26 @@ class IMainService implements MainService {
 
   @override
   Future<List<StoryModel>> getStories() async {
-    final storyItems = await _networkClient.get('stories');
-    List<StoryModel> stories = storyItems['items'].map<StoryModel>((json) =>
-        StoryModel.fromJson(json)).toList();
-    if(stories.isEmpty) {
-      final storiesFromStorage = await _storageService.getStories();
-      stories = storiesFromStorage['items'].map<StoryModel>((json) =>
-          StoryModel.fromJson(json)).toList();
-    } else {
-      _storageService.setStories(storyItems);
+    try {
+      Map<String, dynamic> storyItems = {'items': []};
+      List<StoryModel> stories = [];
+      try {
+        storyItems = await _networkClient.get('stories');
+        stories = storyItems['items'].map<StoryModel>((json) =>
+            StoryModel.fromJson(json)).toList();
+      } catch (e) {
+        print(e);
+      }
+      if (stories.isEmpty) {
+        final storiesFromStorage = await _storageService.getStories();
+        stories = storiesFromStorage['items'].map<StoryModel>((json) =>
+            StoryModel.fromJson(json)).toList();
+      } else {
+        _storageService.setStories(storyItems);
+      }
+      return stories;
+    } catch(e) {
+      return [];
     }
-    return stories;
   }
 }

@@ -9,11 +9,10 @@ class IAuthorizationService extends AuthorizationService {
   @override
   Future<Map<String, dynamic>> registration(String login, String password) async {
     final body = await _networkClient.post(
-        'auth/registration',
+        'register',
         {
-          'email':login,
+          'login':login,
           'password':password,
-          'role': 'user'
         }
     );
     return body;

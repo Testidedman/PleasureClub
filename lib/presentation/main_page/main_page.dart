@@ -75,29 +75,29 @@ class MainPage extends StatelessWidget {
                 builder: (context, state) {
                   if(state.isLoading) {
                     return const Row(
-                        children: [
-                          SizedBox(width: 4),
-                          CustomShimmer(
+                      children: [
+                        SizedBox(width: 4),
+                        CustomShimmer(
                             height: 60,
                             width: 60
-                          ),
-                          SizedBox(width: 8),
-                          CustomShimmer(
-                              height: 60,
-                              width: 60
-                          ),
-                          SizedBox(width: 8),
-                          CustomShimmer(
-                              height: 60,
-                              width: 60
-                          ),
-                          SizedBox(width: 8),
-                          CustomShimmer(
-                              height: 60,
-                              width: 60
-                          ),
-                        ],
-                      );
+                        ),
+                        SizedBox(width: 8),
+                        CustomShimmer(
+                            height: 60,
+                            width: 60
+                        ),
+                        SizedBox(width: 8),
+                        CustomShimmer(
+                            height: 60,
+                            width: 60
+                        ),
+                        SizedBox(width: 8),
+                        CustomShimmer(
+                            height: 60,
+                            width: 60
+                        ),
+                      ],
+                    );
                   }
                   if(state.stories.isEmpty) {
                     return const SizedBox();
@@ -110,10 +110,13 @@ class MainPage extends StatelessWidget {
                         itemCount: state.stories.length,
                         itemBuilder: (BuildContext context, int index) {
                           return GestureDetector(onTap: () {
-                            context.push('/story');
+                            context.push('/story', extra: {
+                              'stories': state.stories,
+                              'index': index
+                            },);
                           },
                             child: Hero(
-                              tag: 'story',
+                              tag: state.stories[index].url,
                               child: Container(
                                 margin: const EdgeInsets.symmetric(horizontal: 4),
                                 padding: const EdgeInsets.all(2),
