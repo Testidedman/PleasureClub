@@ -14,21 +14,31 @@ import 'package:package_info_plus/package_info_plus.dart';
 
 import 'core/models/version_model.dart';
 
+Future<bool> getHealthCheck() async {
+  try {
+    final INetworkClient networkClient = INetworkClient();
+    return (await networkClient.get('healthcheck'))['success'];
+  } catch (e) {
+    return false;
+  }
+}
+
+Future<List<VersionModel>> getVersions() async {
+  try {
+    final INetworkClient networkClient = INetworkClient();
+    final Map<String, dynamic> versionMap = await networkClient.get('versions');
+    return await versionMap['versions'].map<VersionModel>((json) =>
+        VersionModel.fromJson(json)).toList();
+  } catch (e) {
+    return [];
+  }
+}
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final INetworkClient networkClient = INetworkClient();
-  bool healthcheck = false;
-  List<VersionModel> versions = [];
-  try {
-    healthcheck = (await networkClient.get('healthcheck'))['success'];
-    final Map<String, dynamic> versionMap = await networkClient.get('versions');
-    versions = versionMap['versions'].map<VersionModel>((json) =>
-        VersionModel.fromJson(json)).toList();
-  }
-  catch (e) {
-    print(e);
-  }
-  if(healthcheck == false && versions.isEmpty) {
+  bool healthCheck = await getHealthCheck();
+  List<VersionModel> versions = await getVersions();
+  if(healthCheck == false && versions.isEmpty) {
     runApp(
         const MyApp(path: '/error')
     );
