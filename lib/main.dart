@@ -57,7 +57,7 @@ void main() async {
     }
     if(isUpdate == false) {
       final IStorageService _storageService = IStorageService();
-      final String? token = await _storageService.getToken();
+      final String? token = await _storageService.getAccessToken();
       runApp(
           MyApp(token: token, path: '/')
       );

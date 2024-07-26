@@ -4,7 +4,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class StorageService {
   Future<void> setToken(String accessToken, String refreshToken);
-  Future<String?> getToken();
+  Future<String?> getAccessToken();
+  Future<String?> getRefreshToken();
 
   Future<void> setStories(Map<String, dynamic> json);
   Future<Map<String, dynamic>> getStories();
@@ -19,9 +20,16 @@ class IStorageService extends StorageService {
   }
 
   @override
-  Future<String?> getToken() async {
+  Future<String?> getAccessToken() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final String? token = prefs.getString('access_token');
+    return token;
+  }
+
+  @override
+  Future<String?> getRefreshToken() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    final String? token = prefs.getString('refresh_token');
     return token;
   }
 
