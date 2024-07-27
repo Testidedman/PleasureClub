@@ -8,13 +8,20 @@ class IAuthorizationService extends AuthorizationService {
   final INetworkClient _networkClient = INetworkClient();
   @override
   Future<Map<String, dynamic>> registration(String login, String password) async {
-    final body = await _networkClient.post(
-        'register',
-        {
-          'login':login,
-          'password':password,
-        }
-    );
-    return body;
+    try {
+      final body = await _networkClient.post(
+          'register',
+          {
+            'login':login,
+            'password':password,
+          }
+      );
+      if(body['success'] == false) {
+        throw body['status_code'];
+      }
+      return body;
+    } catch (e) {
+      rethrow;
+    }
   }
 }

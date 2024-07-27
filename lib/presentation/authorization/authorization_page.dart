@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'authorization_error.dart';
 import 'bloc/authorization_cubit.dart';
 
 class AuthorizationPage extends StatefulWidget {
@@ -65,6 +66,32 @@ class _AuthorizationPageState extends State<AuthorizationPage> {
                                 )
                             ),
                             const SizedBox(height: 30),
+                            BlocBuilder<AuthorizationCubit, AuthorizationState>(
+                              buildWhen: (previous, current) {
+                                return previous.authorizationError !=
+                                    current.authorizationError;
+                              },
+                              builder: (context, state) {
+                                return Align(
+                                  alignment: Alignment.centerLeft,
+                                  child: Text(
+                                      switch (state.authorizationError) {
+                                        AuthorizationError.userAlreadyExists => 'Пользователь уже существует',
+                                        AuthorizationError.invalidLoginCredentials => 'Пароль или логин введен неверно',
+                                        AuthorizationError.none => '',
+                                      },
+                                      style: GoogleFonts.montserrat(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w500,
+                                              fontSize: 10,
+                                              color: Color(0xffE70000)
+                                          )
+                                      )
+                                  ),
+                                );
+                              },
+                            ),
+                            const SizedBox(height: 5),
                             SizedBox(
                                 height: 44,
                                 child: TextField(onChanged: (value) {
@@ -94,8 +121,11 @@ class _AuthorizationPageState extends State<AuthorizationPage> {
                                           )
                                       ),
                                       focusedBorder: outlineInputBorder(const Color(0xff1B1B1B)),
-                                      errorBorder: outlineInputBorder(Colors.red),
-                                      enabledBorder: outlineInputBorder(const Color(0xffD4D4D4)),
+                                      enabledBorder: outlineInputBorder(
+                                          state.authorizationError == AuthorizationError.none
+                                              ? const Color(0xffD4D4D4)
+                                              : const Color(0xffE70000)
+                                      ),
                                       border: InputBorder.none
                                   ),
                                 )
@@ -104,7 +134,8 @@ class _AuthorizationPageState extends State<AuthorizationPage> {
                             BlocBuilder<AuthorizationCubit, AuthorizationState>(
                               buildWhen: (previous, current) {
                                 return previous.sufColor != current.sufColor ||
-                                    previous.obscureText != current.obscureText;
+                                    previous.obscureText != current.obscureText ||
+                                    previous.authorizationError != current.authorizationError;
                               },
                               builder: (context, state) {
                                 return SizedBox(
@@ -155,7 +186,11 @@ class _AuthorizationPageState extends State<AuthorizationPage> {
                                               )
                                           ),
                                           focusedBorder: outlineInputBorder(const Color(0xff1B1B1B)),
-                                          enabledBorder: outlineInputBorder(const Color(0xffD4D4D4)),
+                                          enabledBorder: outlineInputBorder(
+                                              state.authorizationError == AuthorizationError.none
+                                                  ? const Color(0xffD4D4D4)
+                                                  : const Color(0xffE70000)
+                                          ),
                                           border: InputBorder.none
                                       ),
                                     ),

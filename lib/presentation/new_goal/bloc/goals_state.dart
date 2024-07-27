@@ -2,14 +2,14 @@ part of 'goals_cubit.dart';
 
 class GoalsState {
   GoalsState({
-    this.priority = 'whatever'
+    this.isLoading = false
   });
 
-  final String priority;
+  final bool isLoading;
 
-  GoalsState copyWith(String? priority) {
+  GoalsState copyWith({bool? isLoading}) {
     return GoalsState(
-        priority: priority ?? this.priority,
+      isLoading: isLoading ?? this.isLoading,
     );
   }
 }
