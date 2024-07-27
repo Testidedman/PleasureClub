@@ -5,6 +5,7 @@ import 'package:f/presentation/authorization/bloc/authorization_cubit.dart';
 import 'package:f/presentation/error/error_page.dart';
 import 'package:f/presentation/home/home_page.dart';
 import 'package:f/presentation/main_page/widgets/story_page.dart';
+import 'package:f/presentation/new_goal/bloc/goals_cubit.dart';
 import 'package:f/presentation/new_goal/new_goal.dart';
 import 'package:f/presentation/update/update_page.dart';
 import 'package:flutter/material.dart';
@@ -91,7 +92,11 @@ class MyApp extends StatelessWidget {
           ),
           GoRoute(
             path: '/new_goal',
-            builder: (context, state) => const NewGoal(),
+            builder: (context, state) =>
+                BlocProvider(
+                  create: (context) => GoalsCubit(),
+                  child: const NewGoal(),
+                ),
           ),
           GoRoute(
             path: '/update',
